@@ -1,16 +1,16 @@
-package service;
+package ru.netology.service;
 
-import exception.InvalidCredentials;
-import exception.UnauthorizedUser;
-import model.Authorities;
+import ru.netology.exception.InvalidCredentials;
+import ru.netology.exception.UnauthorizedUser;
+import ru.netology.model.Authorities;
 import org.springframework.stereotype.Service;
-import repository.UserRepository;
+import ru.netology.repository.UserRepository;
 
 import java.util.List;
 
 @Service
 public class AuthorizationService {
-    UserRepository userRepository;
+    private final UserRepository userRepository;
 
     public AuthorizationService(UserRepository userRepository) {
         this.userRepository = userRepository;

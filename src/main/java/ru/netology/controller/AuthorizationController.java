@@ -1,18 +1,17 @@
-package controller;
+package ru.netology.controller;
 
-import exception.InvalidCredentials;
-import exception.UnauthorizedUser;
-import model.Authorities;
+import ru.netology.exception.InvalidCredentials;
+import ru.netology.exception.UnauthorizedUser;
+import ru.netology.model.Authorities;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.AuthorizationService;
+import ru.netology.service.AuthorizationService;
 
 import java.util.List;
 
 @RestController
 public class AuthorizationController {
-    AuthorizationService service;
+    private final AuthorizationService service;
 
     public AuthorizationController(AuthorizationService service) {
         this.service = service;
