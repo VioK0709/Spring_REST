@@ -1,5 +1,6 @@
 package ru.netology.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import ru.netology.exception.InvalidCredentials;
 import ru.netology.exception.UnauthorizedUser;
 import ru.netology.model.Authorities;
